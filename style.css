@@ -1,11 +1,11 @@
-/* ==========================================
+/* 
    SISTEMA DE GESTIÓN DE ESTUDIANTES
    Autor: José Fernando Buitrago Bohórquez
-========================================== */
 
-/* ==========================================
-   SISTEMA DE GESTIÓN DE ESTUDIANTES
-========================================== */
+   Hoja de estilos de la mascara de la aplicación.
+   Contiene el diseño y la presentación de la
+   aplicación desarrollada en HTML y JavaScript.
+ */
 
 body{
     font-family: Arial, Helvetica, sans-serif;
@@ -13,10 +13,22 @@ body{
     margin:30px;
 }
 
+/* 
+   CONTENEDOR PRINCIPAL
+   Centra todo el contenido de la aplicación para que se vea mas bnito 
+   y limita el ancho máximo de la página por si se usa en el celular
+ */
+
 .contenedor{
     max-width:1100px;
     margin:auto;
 }
+
+/* 
+   TÍTULOS
+   Estilos para los encabezados principales
+   y secundarios de la aplicación esto es solo presentacino 
+ */
 
 h1{
     text-align:center;
@@ -28,6 +40,12 @@ h2{
     margin-top:35px;
 }
 
+/* 
+   FORMULARIO
+   Apariencia general del formulario donde
+   se registran y actualizan los estudiantes solo para mejorar apariencia   
+ */
+
 form{
     background:#fff;
     border:1px solid #ccc;
@@ -36,6 +54,12 @@ form{
     max-width:700px;
     margin:auto;
 }
+
+/* 
+  DATOS DE ENTRADA
+   Estilo para los textos (label) y los
+   campos donde el usuario ingresa datos.
+ */
 
 label{
     font-weight:bold;
@@ -48,7 +72,11 @@ input{
     box-sizing:border-box;
 }
 
-/* ===== Notas ===== */
+/* 
+   CAMPOS DE LA SNOTAS
+   Organiza las tres notas del estudiante
+   en una sola fila utilizando Flexbox.
+ */
 
 .notas{
     display:flex;
@@ -60,7 +88,10 @@ input{
     flex:1;
 }
 
-/* ===== Botones ===== */
+/* 
+   BOTONES PRINCIPALES
+   Organiza los botones Registrar,
+   Actualizar y Cancelar edición ( este ultimo lo dje para que se vea mas bnito) en una sola fila.
 
 .botones{
     display:flex;
@@ -71,7 +102,11 @@ input{
     flex:1;
 }
 
-/* ===== Buscador ===== */
+/* 
+   BUSCADOR DE ESTUDIANTES
+   Organiza el campo de búsqueda y el botón
+   Buscar en una misma línea.
+ */
 
 .busqueda{
     display:flex;
@@ -90,7 +125,9 @@ input{
     margin:0;
 }
 
-/* ===== Botones ===== */
+/* 
+   ESTILO  DE LOS BOTONES
+ */
 
 button{
     padding:10px 15px;
@@ -98,24 +135,32 @@ button{
     cursor:pointer;
 }
 
+/* Botón para registrar un nuevo estudiante CRUD ...*/
+
 #btnRegistrar{
     background:#0d6efd;
     color:white;
 }
+
 
 #btnActualizar{
     background:#198754;
     color:white;
 }
 
+
+
 #btnCancelar{
     background:#ffc107;
 }
+
+
 
 #btnBuscar{
     background:#0dcaf0;
     color:white;
 }
+
 
 .btnEliminar{
     background:#dc3545;
@@ -125,12 +170,17 @@ button{
     cursor:pointer;
 }
 
+/* Cambia el color al pasar el mouse */
+
 .btnEliminar:hover{
     background:#bb2d3b;
 }
 
-
-/* ===== Tabla ===== */
+/* 
+   TABLA DE ESTUDIANTES
+   Define el estilo de la tabla donde se
+   muestran todos los registros guardados es la parte de abajo
+ */
 
 table{
     width:100%;
@@ -139,17 +189,17 @@ table{
     background:white;
 }
 
+/* Encabezados de la tabla */
+
 th{
     background:#1f4e79;
     color:white;
     padding:10px;
 }
 
+/* Celdas de la tabla */
+
 td{
     padding:10px;
     text-align:center;
-}
-
-tr:nth-child(even){
-    background:#f2f2f2;
 }

@@ -1,20 +1,20 @@
-// ==========================================
+// 
 // SISTEMA DE GESTIÓN DE ESTUDIANTES
-// Autor: José Fernando Buitrago Bohórquez
-// ==========================================
+// Autor: Jose Fernando Buitrago Bohorquez
+// 
 
 
-// ==========================================
+// 
 // VARIABLES GLOBALES
-// ==========================================
+// 
 
 let estudiantes = [];
 let indiceEditar = -1;
 
 
-// ==========================================
-// EVENTO: SOLO NÚMEROS EN DOCUMENTO
-// ==========================================
+// 
+// EVENTO: para que solo acepte numero en el campo de documento 
+//
 
 document.getElementById("documento").addEventListener("input", function () {
 
@@ -23,9 +23,9 @@ document.getElementById("documento").addEventListener("input", function () {
 });
 
 
-// ==========================================
-// BOTÓN REGISTRAR
-// ==========================================
+// 
+// BOTÓN PARA REGISTRAR ESTUDIANTE
+//
 
 document.getElementById("btnRegistrar").addEventListener("click", function () {
 
@@ -38,9 +38,9 @@ document.getElementById("btnRegistrar").addEventListener("click", function () {
     let nota3 = document.getElementById("nota3").value;
 
 
-    // ==========================
-    // VALIDACIONES
-    // ==========================
+    // 
+    // VALIDACIONES PARA CUANDO ESTE EN BLANCO SALGA UN MENSAJE DE ALERTA Y SI NO SON NUMEROS QUE TAMBIEN SALGA OTRO MENSAJE
+    // 
 
     if (
         documento == "" ||
@@ -63,7 +63,7 @@ document.getElementById("btnRegistrar").addEventListener("click", function () {
         return;
 
     }
-
+// SI SE INGRESA EL MISMO DOCUMENTO APARECE LA ALERTA DE QYE YA EXISTE
 
     for (let i = 0; i < estudiantes.length; i++) {
 
@@ -76,7 +76,7 @@ document.getElementById("btnRegistrar").addEventListener("click", function () {
 
     }
 
-
+// CONDICIONAL PARA QUE LAS NOTAS ESTEN EN UN RANGO ESPECIFICO DE NO SER ASI ARROJA UN MENSAJE DE ALERTA  
     if (
 
         Number(nota1) < 0 || Number(nota1) > 5 ||
@@ -89,7 +89,7 @@ document.getElementById("btnRegistrar").addEventListener("click", function () {
         return;
 
     }
-
+// REGISTRO Y LIMPIUEZA DE TABLA
 
     let estudiante = {
 
@@ -114,9 +114,9 @@ document.getElementById("btnRegistrar").addEventListener("click", function () {
 });
 
 
-// ==========================================
+// 
 // BOTÓN BUSCAR
-// ==========================================
+// 
 
 document.getElementById("btnBuscar").addEventListener("click", function () {
 
@@ -167,13 +167,9 @@ if (documentoBuscar == "") {
 
 });
 
-// ==========================================
+// 
 // BOTÓN ACTUALIZAR
-// ==========================================
-
-// ==========================================
-// BOTÓN ACTUALIZAR
-// ==========================================
+// 
 
 document.getElementById("btnActualizar").addEventListener("click", function () {
 
@@ -224,9 +220,9 @@ document.getElementById("btnActualizar").addEventListener("click", function () {
 
 });
 
-// ==========================================
+// 
 // BOTÓN CANCELAR
-// ==========================================
+// 
 
 document.getElementById("btnCancelar").addEventListener("click", function () {
 
@@ -235,9 +231,9 @@ document.getElementById("btnCancelar").addEventListener("click", function () {
 });
 
 
-// ==========================================
+// 
 // FUNCIÓN MOSTRAR ESTUDIANTES
-// ==========================================
+// 
 
 function mostrarEstudiantes() {
 
@@ -255,6 +251,8 @@ function mostrarEstudiantes() {
 
         ) / 3;
 
+
+        // CALCULO DEL PROMERIO DE NOTAS Y MENSAJE SEGUN RESULTADO
         let estado = "";
 
         if (promedio >= 3) {
@@ -295,9 +293,9 @@ function mostrarEstudiantes() {
 
 }
 
-// ==========================================
-// FUNCIÓN LIMPIAR FORMULARIO
-// ==========================================
+// 
+// FUNCIÓN LIMPIAR FORMULARIO ESTO AYUDA MUCHO PARA QUE NO SE INGRESE INFORMACION ERRADA Y SE PUEDA VOLVER A INGRESAR NUEVAMENTE
+// 
 
 function limpiarFormulario() {
 
@@ -318,9 +316,9 @@ function limpiarFormulario() {
     document.getElementById("btnActualizar").disabled = true;
     document.getElementById("btnCancelar").disabled = true;
 }
-// ==========================================
+// 
 // FUNCIÓN ELIMINAR ESTUDIANTE
-// ==========================================
+// 
 
 function eliminarEstudiante(indice) {
 
